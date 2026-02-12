@@ -80,9 +80,8 @@ h3 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+  background: linear-gradient(rgba(39, 66, 71, 0.9), rgba(0, 0, 0, 0.9));
+  background-image: url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
   background-size: cover;
   background-position: center;
   text-align: left;
