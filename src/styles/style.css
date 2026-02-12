@@ -1,0 +1,254 @@
+/** RESET */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: rgb(0, 34, 44);
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  scroll-margin-top: 100px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 60px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 10px 10px 0 0;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.btn-secondary:hover {
+  background: #38bdf8;
+  color: #0b1220;
+}
+
+/** HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url(../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png) center/cover;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+/** GRID */
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/** CARDS */
+.card {
+  background: linear-gradient(145deg, #0f5040, #0c3f33);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  transition: 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px #3ec971;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #22c55e, transparent);
+  transition: 0.6s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #22c55e;
+}
+
+.card_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 6px rgb(1, 44, 35);
+  margin-bottom: 1rem;
+  transition: 0.4s ease;
+}
+
+/** HIGHLIGHT */
+.highlight {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/** CTA */
+.cta {
+  background: linear-gradient(180deg, #0f1a2e, #020617);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/** VISIT SECTION LAYOUT */
+#visit_coyote {
+  background-color: rgb(0, 44, 54);
+  background:
+    linear-gradient(rgba(39, 66, 71, 0.9), rgba(0, 0, 0, 0.9)),
+    url(../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png) center/cover;
+}
+
+.visit-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.visit-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  background: rgba(15, 80, 64, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 1.8rem;
+  border-radius: 1rem;
+  transition: 0.4s ease;
+}
+
+.visit-info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px #3ec971;
+}
+
+.visit-info h3 {
+  font-size: 1.5rem;
+  align-self: center;
+  margin: 50px 0;
+  color: #22c55e;
+}
+
+.visit-info p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.visit-info a {
+  align-self: center;
+}
+
+.visit-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+}
