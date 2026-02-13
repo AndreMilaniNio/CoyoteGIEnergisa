@@ -14,7 +14,7 @@ body {
   background: rgb(0, 34, 44);
   color: #f1f5f9;
   line-height: 1.6;
-  overflow-x: hidden; /* Previne rolagem lateral indesejada */
+  overflow-x: hidden;
 }
 
 .container {
@@ -28,11 +28,9 @@ body {
   padding: 100px 0;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-weight: 800;
-  line-height: 1.2; /* Melhor leitura em títulos quebrados */
+  line-height: 1.2;
 }
 
 .section-title {
@@ -46,8 +44,7 @@ h3 {
   color: #94a3b8;
   margin-bottom: 60px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 60px auto; /* Centraliza horizontalmente */
 }
 
 /* BUTTONS */
@@ -59,7 +56,7 @@ h3 {
   text-decoration: none;
   transition: 0.3s;
   margin: 10px 10px 0 0;
-  text-align: center; /* Garante alinhamento se virar bloco */
+  text-align: center;
 }
 
 .btn-primary {
@@ -89,11 +86,11 @@ h3 {
   align-items: center;
   background:
     linear-gradient(rgba(39, 66, 71, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png"); /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
   text-align: left;
-  padding: 120px 0 60px 0; /* Espaço para mobile header se houver */
+  padding: 120px 0 60px 0;
 }
 
 .hero-content {
@@ -116,11 +113,13 @@ h3 {
 .grid {
   display: grid;
   gap: 30px;
+  /* --- AJUSTE: Garante que os itens do grid tenham a mesma altura */
+  align-items: stretch; 
 }
 
-/* Ajuste: mudei o mínimo de 350px para 280px para caber em celulares pequenos */
+/* --- AJUSTE: Reduzi minmax para 260px para caber melhor em telas médias */
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 /** CARDS */
@@ -132,9 +131,12 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
-  height: 100%; /* Garante altura igual no grid */
-  display: flex;
-  flex-direction: column;
+  
+  /* --- AJUSTE IMPORTANTE DE ALINHAMENTO --- */
+  height: 100%; /* Ocupa toda a altura da célula do grid */
+  display: flex; 
+  flex-direction: column; /* Organiza conteúdo verticalmente */
+  justify-content: flex-start; /* Começa do topo */
 }
 
 .card:hover {
@@ -166,14 +168,17 @@ h3 {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 0.5rem; /* Ajustei para ficar proporcional */
   box-shadow: 0px 8px 6px rgb(1, 44, 35);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transition: 0.4s ease;
 }
 
 .card-content {
-    flex-grow: 1; /* Empurra o conteúdo para preencher espaço se necessário */
+  /* --- AJUSTE: O conteúdo ocupa o espaço restante */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /** HIGHLIGHT */
@@ -202,19 +207,15 @@ h3 {
 /** VISIT SECTION LAYOUT */
 #visit_coyote {
   background-color: rgb(0, 44, 54);
-  background:
-    linear-gradient(rgba(39, 66, 71, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
-
   background-size: cover;
   background-position: center;
 }
 
 .visit-wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  align-items: start; /* Impede esticar a altura do card da esquerda desnecessariamente */
+  grid-template-columns: 1fr 2fr; /* Coluna da esq menor, direita maior */
+  gap: 40px;
+  align-items: start;
 }
 
 .visit-info {
@@ -226,6 +227,7 @@ h3 {
   transition: 0.4s ease;
   display: flex;
   flex-direction: column;
+  height: 100%; /* Para alinhar altura se necessário */
 }
 
 .visit-info:hover {
@@ -248,7 +250,7 @@ h3 {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  aspect-ratio: 16/9; /* Mantém proporção da imagem */
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
 
@@ -275,39 +277,35 @@ footer {
    MEDIA QUERIES (RESPONSIVIDADE)
    ========================================= */
 
-/* Tablets (Portrait) e Telas Médias */
+/* --- AJUSTE: Tablets e Laptops Menores (até 1024px) */
+/* Este breakpoint evita que os cards fiquem espremidos ao lado do texto */
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.8rem;
   }
   
   .visit-wrapper {
-    grid-template-columns: 1fr; /* Empilha o bloco descritivo e os cards */
-    gap: 40px;
+    grid-template-columns: 1fr; /* Empilha: Texto em cima, Cards embaixo */
+    gap: 50px;
   }
 
   .visit-info {
     max-width: 100%;
-    flex-direction: column;
-  }
-
-  .visit-img {
-    height: 300px;
   }
 }
 
-/* Mobile (Landscape) e Tablets Pequenos */
+/* Mobile e Tablets Pequenos */
 @media (max-width: 768px) {
   .section {
     padding: 60px 0;
   }
 
   .hero {
-    text-align: center; /* Centraliza Hero no mobile para melhor equilíbrio */
+    text-align: center;
   }
   
   .hero-content {
-      margin: 0 auto;
+    margin: 0 auto;
   }
 
   .hero h1 {
@@ -319,8 +317,8 @@ footer {
   }
   
   .highlight {
-      padding: 30px;
-      font-size: 1rem;
+    padding: 30px;
+    font-size: 1rem;
   }
 }
 
@@ -331,19 +329,12 @@ footer {
   }
 
   .btn {
-    width: 100%; /* Botões ocupam largura total para facilitar o clique */
+    width: 100%;
     margin: 10px 0 0 0;
   }
 
+  /* Em telas muito pequenas, força 1 coluna */
   .grid-3 {
-    grid-template-columns: 1fr; /* Garante 1 coluna única em telas muito estreitas */
-  }
-  
-  .visit-info {
-      padding: 1.2rem;
-  }
-  
-  .visit-img {
-      height: 200px;
+    grid-template-columns: 1fr; 
   }
 }
