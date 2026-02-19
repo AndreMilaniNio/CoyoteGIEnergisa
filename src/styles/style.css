@@ -28,7 +28,9 @@ body {
   padding: 100px 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 800;
   line-height: 1.2;
 }
@@ -85,8 +87,13 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   background:
-    linear-gradient(rgba(39, 66, 71, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png"); /* Verifique se o caminho da imagem existe */
+    linear-gradient(
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+  /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
   text-align: left;
@@ -114,7 +121,7 @@ h1, h2, h3 {
   display: grid;
   gap: 30px;
   /* --- AJUSTE: Garante que os itens do grid tenham a mesma altura */
-  align-items: stretch; 
+  align-items: stretch;
 }
 
 /* --- AJUSTE: Reduzi minmax para 260px para caber melhor em telas médias */
@@ -131,10 +138,10 @@ h1, h2, h3 {
   border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
-  
+
   /* --- AJUSTE IMPORTANTE DE ALINHAMENTO --- */
   height: 100%; /* Ocupa toda a altura da célula do grid */
-  display: flex; 
+  display: flex;
   flex-direction: column; /* Organiza conteúdo verticalmente */
   justify-content: flex-start; /* Começa do topo */
 }
@@ -206,7 +213,16 @@ h1, h2, h3 {
 
 /** VISIT SECTION LAYOUT */
 #visit_coyote {
-  background-color: rgb(0, 44, 54);
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+  /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
 }
@@ -283,7 +299,7 @@ footer {
   .hero h1 {
     font-size: 2.8rem;
   }
-  
+
   .visit-wrapper {
     grid-template-columns: 1fr; /* Empilha: Texto em cima, Cards embaixo */
     gap: 50px;
@@ -303,7 +319,7 @@ footer {
   .hero {
     text-align: center;
   }
-  
+
   .hero-content {
     margin: 0 auto;
   }
@@ -312,10 +328,11 @@ footer {
     font-size: 2.2rem;
   }
 
-  .section-title, .cta h2 {
+  .section-title,
+  .cta h2 {
     font-size: 2rem;
   }
-  
+
   .highlight {
     padding: 30px;
     font-size: 1rem;
@@ -335,6 +352,6 @@ footer {
 
   /* Em telas muito pequenas, força 1 coluna */
   .grid-3 {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
