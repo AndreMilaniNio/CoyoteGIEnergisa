@@ -2,13 +2,11 @@
 html {
   scroll-behavior: smooth;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Inter", sans-serif;
   background: rgb(0, 34, 44);
@@ -16,40 +14,33 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
   scroll-margin-top: 100px;
 }
-
 .section {
   padding: 100px 0;
 }
-
 h1,
 h2,
 h3 {
   font-weight: 800;
   line-height: 1.2;
 }
-
 .section-title {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .section-subtitle {
   text-align: center;
   color: #94a3b8;
   margin-bottom: 60px;
   max-width: 800px;
   margin: 0 auto 60px auto; /* Centraliza horizontalmente */
-}
-
-/* BUTTONS */
+} /* BUTTONS */
 .btn {
   display: inline-block;
   padding: 14px 28px;
@@ -60,28 +51,22 @@ h3 {
   margin: 10px 10px 0 0;
   text-align: center;
 }
-
 .btn-primary {
   background: linear-gradient(135deg, #16a34a, #22c55e);
   color: #fff;
 }
-
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
 }
-
 .btn-secondary {
   border: 1px solid #38bdf8;
   color: #38bdf8;
 }
-
 .btn-secondary:hover {
   background: #38bdf8;
   color: #0b1220;
-}
-
-/** HERO */
+} /** HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -92,44 +77,33 @@ h3 {
       rgba(39, 66, 71, 0.1),
       rgba(15, 80, 64, 1)
     ),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
-  /* Verifique se o caminho da imagem existe */
+    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png"); /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
   text-align: left;
   padding: 120px 0 60px 0;
 }
-
 .hero-content {
   max-width: 800px;
 }
-
 .hero h1 {
   font-size: 3.2rem;
   margin-bottom: 20px;
 }
-
 .hero p {
   margin-bottom: 30px;
   font-size: 1.1rem;
   color: #e2e8f0;
   max-width: 650px;
-}
-
-/** GRID SYSTEM */
+} /** GRID SYSTEM */
 .grid {
   display: grid;
-  gap: 30px;
-  /* --- AJUSTE: Garante que os itens do grid tenham a mesma altura */
+  gap: 30px; /* --- AJUSTE: Garante que os itens do grid tenham a mesma altura */
   align-items: stretch;
-}
-
-/* --- AJUSTE: Reduzi minmax para 260px para caber melhor em telas médias */
+} /* --- AJUSTE: Reduzi minmax para 260px para caber melhor em telas médias */
 .grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-/** CARDS */
+} /** CARDS */
 .card {
   background: linear-gradient(145deg, #0f5040, #0c3f33);
   padding: 1.8rem;
@@ -137,20 +111,16 @@ h3 {
   transition: 0.4s ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
-  overflow: hidden;
-
-  /* --- AJUSTE IMPORTANTE DE ALINHAMENTO --- */
+  overflow: hidden; /* --- AJUSTE IMPORTANTE DE ALINHAMENTO --- */
   height: 100%; /* Ocupa toda a altura da célula do grid */
   display: flex;
   flex-direction: column; /* Organiza conteúdo verticalmente */
   justify-content: flex-start; /* Começa do topo */
 }
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 30px #3ec971;
 }
-
 .card::before {
   content: "";
   position: absolute;
@@ -161,16 +131,13 @@ h3 {
   background: linear-gradient(90deg, transparent, #22c55e, transparent);
   transition: 0.6s;
 }
-
 .card:hover::before {
   left: 100%;
 }
-
 .card h3 {
   margin-bottom: 15px;
   color: #22c55e;
 }
-
 .card_img {
   width: 100%;
   height: 200px;
@@ -180,15 +147,12 @@ h3 {
   margin-bottom: 1.5rem;
   transition: 0.4s ease;
 }
-
 .card-content {
   /* --- AJUSTE: O conteúdo ocupa o espaço restante */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-/** HIGHLIGHT */
+} /** HIGHLIGHT */
 .highlight {
   background: linear-gradient(135deg, #15803d, #16a34a);
   padding: 60px;
@@ -197,21 +161,16 @@ h3 {
   margin-top: 50px;
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-/** CTA */
+} /** CTA */
 .cta {
   background: linear-gradient(180deg, #0f1a2e, #020617);
   text-align: center;
   padding: 100px 0;
 }
-
 .cta h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-}
-
-/** VISIT SECTION LAYOUT */
+} /** VISIT SECTION LAYOUT */
 #visit_coyote {
   background:
     linear-gradient(
@@ -221,19 +180,16 @@ h3 {
       rgba(39, 66, 71, 0.1),
       rgba(15, 80, 64, 1)
     ),
-    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
-  /* Verifique se o caminho da imagem existe */
+    url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png"); /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
 }
-
 .visit-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr; /* Coluna da esq menor, direita maior */
   gap: 40px;
   align-items: start;
 }
-
 .visit-info {
   background: rgba(15, 80, 64, 0.75);
   backdrop-filter: blur(10px);
@@ -245,23 +201,19 @@ h3 {
   flex-direction: column;
   height: 100%; /* Para alinhar altura se necessário */
 }
-
 .visit-info:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 30px #3ec971;
 }
-
 .visit-info h3 {
   font-size: 1.5rem;
   margin: 30px 0 20px 0;
   color: #22c55e;
 }
-
 .visit-info p {
   color: #cbd5e1;
   margin-bottom: 20px;
 }
-
 .visit-img {
   width: 100%;
   border-radius: 12px;
@@ -269,88 +221,64 @@ h3 {
   aspect-ratio: 16/9;
   object-fit: cover;
 }
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
-
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 footer {
   background: #020617;
   text-align: center;
   padding: 40px 20px;
   color: #64748b;
   font-size: 0.9rem;
-}
-
-/* =========================================
-   MEDIA QUERIES (RESPONSIVIDADE)
-   ========================================= */
-
-/* --- AJUSTE: Tablets e Laptops Menores (até 1024px) */
-/* Este breakpoint evita que os cards fiquem espremidos ao lado do texto */
+} /* ========================================= MEDIA QUERIES (RESPONSIVIDADE) ========================================= */ /* --- AJUSTE: Tablets e Laptops Menores (até 1024px) */ /* Este breakpoint evita que os cards fiquem espremidos ao lado do texto */
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 2.8rem;
   }
-
   .visit-wrapper {
     grid-template-columns: 1fr; /* Empilha: Texto em cima, Cards embaixo */
     gap: 50px;
   }
-
   .visit-info {
     max-width: 100%;
   }
-}
-
-/* Mobile e Tablets Pequenos */
+} /* Mobile e Tablets Pequenos */
 @media (max-width: 768px) {
   .section {
     padding: 60px 0;
   }
-
   .hero {
     text-align: center;
   }
-
   .hero-content {
     margin: 0 auto;
   }
-
   .hero h1 {
     font-size: 2.2rem;
   }
-
   .section-title,
   .cta h2 {
     font-size: 2rem;
   }
-
   .highlight {
     padding: 30px;
     font-size: 1rem;
   }
-}
-
-/* Mobile (Portrait) */
+} /* Mobile (Portrait) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
   }
-
   .btn {
     width: 100%;
     margin: 10px 0 0 0;
-  }
-
-  /* Em telas muito pequenas, força 1 coluna */
+  } /* Em telas muito pequenas, força 1 coluna */
   .grid-3 {
     grid-template-columns: 1fr;
   }
