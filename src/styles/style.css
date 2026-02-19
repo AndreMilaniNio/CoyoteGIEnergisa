@@ -90,7 +90,7 @@ h3 {
     linear-gradient(
       rgba(39, 66, 71, 0.1),
       rgba(39, 66, 71, 0.1),
-      rgba(0, 0, 0, 1)
+      rgba(15, 80, 64, 1)
     ),
     url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
   /* Verifique se o caminho da imagem existe */
@@ -215,11 +215,11 @@ h3 {
 #visit_coyote {
   background:
     linear-gradient(
-      rgba(0, 0, 0, 1),
+      rgba(15, 80, 64, 1),
       rgba(39, 66, 71, 0.1),
       rgba(39, 66, 71, 0.1),
       rgba(39, 66, 71, 0.1),
-      rgba(0, 0, 0, 1)
+      rgba(15, 80, 64, 1)
     ),
     url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
   /* Verifique se o caminho da imagem existe */
