@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #0f5040; /* cor base principal */
+  background: rgb(0, 34, 44);
   color: #f1f5f9;
   line-height: 1.6;
   overflow-x: hidden;
@@ -88,15 +88,15 @@ h3 {
   align-items: center;
   background:
     linear-gradient(
-      to bottom,
-      #0f5040 0%,
-      rgba(15, 80, 64, 0.85) 40%,
-      rgba(15, 80, 64, 0.95) 70%,
-      #0f5040 100%
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(15, 80, 64, 1)
     ),
     url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+  /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
+  text-align: left;
   padding: 120px 0 60px 0;
 }
 
@@ -201,7 +201,7 @@ h3 {
 
 /** CTA */
 .cta {
-  background: linear-gradient(to bottom, #0f5040 0%, #0c3f33 100%);
+  background: linear-gradient(180deg, #0f1a2e, #020617);
   text-align: center;
   padding: 100px 0;
 }
@@ -215,12 +215,14 @@ h3 {
 #visit_coyote {
   background:
     linear-gradient(
-      to bottom,
-      #0f5040 0%,
-      rgba(15, 80, 64, 0.9) 50%,
-      #0f5040 100%
+      rgba(15, 80, 64, 1),
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(39, 66, 71, 0.1),
+      rgba(15, 80, 64, 1)
     ),
     url("../../images/Gemini_Generated_Image_fq4h9bfq4h9bfq4h.png");
+  /* Verifique se o caminho da imagem existe */
   background-size: cover;
   background-position: center;
 }
